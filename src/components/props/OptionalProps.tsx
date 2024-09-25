@@ -1,4 +1,4 @@
-type Optprops={
+export type Optprops={
     name:string,
     count:number,
     price?:number

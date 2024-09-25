@@ -5,6 +5,11 @@ import {ChildrenText, ChildrenComp} from './components/props/ChildrenText';
 import OptionalProps from './components/props/OptionalProps';
 import {MyEvents,MyChangeEvents,StyleProperty,Login} from './components/props/MyEvents';
 import { ThemeContext } from './components/context/ThemeContext';
+import {AuthWrapFunc} from "./components/context/AuthContext"
+import DisplayAuthUser from './components/minicomponents/DisplayAuthUser';
+import PrivateUser from './components/minicomponents/PrivateUser';
+import Generics from './components/generics/Generics';
+import { arrayString,arrayNumber } from './components/constants';
 import './App.css';
 
 function App() {
@@ -41,6 +46,13 @@ function App() {
       <ThemeContext>
         <Login/>
       </ThemeContext>
+      <AuthWrapFunc>
+        <DisplayAuthUser/>
+      </AuthWrapFunc>
+      <PrivateUser isLoggedIn={false} component={OptionalProps}/>
+      <Generics data={arrayString}/>
+      <Generics data={arrayNumber}/>
+
     </div>
   );
 }
