@@ -1,0 +1,1 @@
+export const NAVBARDATA = ["About","Resume","Projects","Contacts"]
