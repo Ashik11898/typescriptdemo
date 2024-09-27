@@ -58,10 +58,15 @@
                     background: $backcolor1;
                     left: 0px;
                     padding: 20px 0;
+                    display: none;
                    div{
                     padding-right: 20px;
+                    text-align: right;
                    }
                     
+                }
+                .navitems-list.enable{
+                    display: flex;
                 }
                 .mob-icon{
                     display: block;
