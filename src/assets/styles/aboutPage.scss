@@ -1,0 +1,21 @@
+.about-parent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    height: 100%;
+    position: relative;
+    color:$black;
+    .about-left-block{
+        background-color: $backcolor1;
+    }
+    .about-right-block{
+        height: 100%;
+        padding: 50px 30px 0 100px;
+        box-sizing: border-box;
+            h2{
+            font-size: 60px;
+            font-family: 'satoshi-bold';
+            margin: 0px;
+        }
+     }
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProfileCard = () => {
   return (
-    <div>ProfileCard</div>
+    <div className='profile-parent'>ProfileCard</div>
   )
 }
 

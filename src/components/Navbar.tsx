@@ -1,29 +1,34 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
 import { NAVBARDATA } from "../constants"
-import { generateUniqueId } from "../utlity/globalFunctions"
-import "../assets/styles/navpage.scss"
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import useOutsideClick from "../hooks/useOutsideClick";
+import "../assets/styles/navpage.scss"
 
 const Navbar = () => {
+  const [navList,setNavList] =useState(NAVBARDATA)
   const [navPopup,setNavpop] =useState(false)
-  
+  const closeRef = useRef(null);
+
   const openNavItems =(e:React.MouseEvent<HTMLDivElement>)=>{
     e.preventDefault();
     setNavpop(!navPopup)
-    console.log("test1");
-    
   }
 
 
+
+  useOutsideClick(closeRef, () => {setNavpop(false)})
+
+
   return (
-    <div className="navpage-parent">
-      <div className="navbar-name">Mohamed Ashik <span>FRONTEND DEVELOPER</span></div>
+    
+    <div className="navpage-parent" ref={closeRef}>
+      <div className="navbar-name" onClick={(e)=>{openNavItems(e)}}>Mohamed Ashik <span>FRONTEND DEVELOPER</span></div>
       <div className={`navitems-list ${navPopup ? "enable":""}`}>
-        {NAVBARDATA.map((pages,pageId)=>(<div key={generateUniqueId(pageId)}>{pages}</div>))}
+        {navList.map((pages)=>(<div key={pages.id} className={`navitems ${pages.isactive ? "active":""}`} >{pages.pagename}</div>))}
       </div>
       <div className="mob-icon hide" onClick={(e)=>{openNavItems(e)}}><GiHamburgerMenu fontSize={24}/> </div>
     </div>
+    
   )
 }
 

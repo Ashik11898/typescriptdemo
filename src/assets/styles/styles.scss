@@ -1,5 +1,50 @@
 @import "./navpage.scss";
 @import "./variable.scss";
+@import "./aboutPage.scss";
 @import "./responsive.scss";
 
 .hide{display: none;}
+
+.load-components{
+    width: 100%;
+    margin-top: 83px;
+    position: absolute;
+    height: calc(100vh - 163px);
+    box-sizing: border-box;
+}
+
+
+// LAYOUT COMPONENT SCSS
+
+.layout-parent{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+
+
+// FOOTER COMPONENT SCSS
+
+.footer-parent{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    background-color: $footerbackcolor;
+    width: 100%;
+    color:$white;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+// PROFILE CARD COMPONENT SCSS
+
+.profile-parent{
+    background-color: $cardbackcolor;
+    width: 250px;
+    height: 305px;
+    position: absolute;
+    left: 22%;
+    top: 12%;
+
+}
