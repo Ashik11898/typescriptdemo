@@ -1,18 +1,24 @@
-import Layout from './Layout';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import MyRoutes from './MyRoutes';
+import usePortfolioData from './hooks/usePortfolioData';
 import './App.css';
 import "./assets/styles/styles.scss"
+import ProfileCard from './components/ProfileCard';
+
+import Layout from './Layout';
+import AboutPage from './pages/AboutPage';
 
 function App() {
+
+const portFolioData = usePortfolioData()
+
+
+
   return (
     <div className="App">
       <Layout>
-          <Navbar/>
-            <div className='load-components'><MyRoutes/></div>
-          <Footer/>
+        <ProfileCard/>
+        <AboutPage/>
       </Layout>
+      
     </div>
   );
 }

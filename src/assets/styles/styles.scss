@@ -17,9 +17,9 @@
 // LAYOUT COMPONENT SCSS
 
 .layout-parent{
-    width: 100%;
+    width: 992px;
     position: relative;
-    height: 100vh;
+    padding-top: 161px;
 }
 
 
@@ -40,11 +40,49 @@
 // PROFILE CARD COMPONENT SCSS
 
 .profile-parent{
-    background-color: $cardbackcolor;
-    width: 250px;
-    height: 305px;
-    position: absolute;
-    left: 22%;
-    top: 12%;
+    background-color: $white;
+    width: 350px;
+    height: 400px;
+    position: fixed;
+    border-radius: 16px;
+    padding: 10px;
+    // left: 22%;
+    // top: 12%;
 
+}
+
+//headtext-parent
+.headtext-parent{
+    font-family: Inter-ExtraBold;
+    font-size: 65px;
+    font-style: italic;
+    margin: 0 0;
+    letter-spacing: 5px;
+    span{
+        color:rgb(182,180,189,2)
+    }
+}
+
+//paratext-parent
+.paratext-parent{
+    color: rgb(153,143,143);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+//workInfo-parent
+.workInfo-parent{
+    display: flex;
+    gap:15px;
+    font-family: Inter-ExtraBold;
+    div{
+        font-size: 50px;
+        p{
+            font-family: satoshi;
+            font-size: 16px;
+            margin: 0;
+            color: rgb(153,143,143);
+
+        }
+    }
 }

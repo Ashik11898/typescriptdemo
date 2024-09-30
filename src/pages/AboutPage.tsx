@@ -1,22 +1,17 @@
-import ProfileCard from "../components/ProfileCard"
-import {RESUMEOBJECT} from "../constants"
+import {HeadingText, ParaText, WorkInfo,} from "../elements/HeadingText"
 
 const AboutPage = () => {
-  const {description}=RESUMEOBJECT
+  const HEADTEXT = "FRONTENED"
+  const SUBTEXT ="DEVELOPER"
+  const PARATEXT = "Passionate about building dynamic and engaging web interfaces. I specialize in turning concepts into pixel-perfect, responsive designs using modern frameworks like React and Next.js. With a focus on clean code, performance optimization, and seamless user experiences, I transform ideas into polished, user-friendly products that bring value to users."
+
 
   return (
     <div className='about-parent'>
-      <div className='about-left-block'>
-        <ProfileCard/>
-      </div>
-      <div className="about-right-block">
-        <h2>Hello</h2>
-        <p>{description}</p>
-        <div style={{display:"flex"}}> 
-          <button>Resume</button>
-          <button>Projects</button>
-        </div>
-      </div>
+       <HeadingText mainText={HEADTEXT} subText={SUBTEXT}/>
+       <ParaText mainText={PARATEXT}/>
+       
+       <WorkInfo/>
     </div>
   )
 }

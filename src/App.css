@@ -36,6 +36,14 @@
   } 
 
 
+  @font-face {
+    font-family: Inter-ExtraBold;
+    src: url("../public/fonts/Inter-ExtraBold.ttf") format("opentype");
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  } 
+ 
 
 .App {
     font-style: normal;
@@ -43,5 +51,8 @@
     font-family: satoshi;
     font-size: 16px;
     font-weight: 400;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
 }
 
