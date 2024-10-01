@@ -7,6 +7,8 @@ export const NAVBARDATA = [
 
 export const RESUMEOBJECT ={
     "name":"Mohamed Ashik",
+    "role":["frontened","ui","react js","developer"],
+    "desc": "Passionate about building dynamic and engaging web interfaces. I specialize in turning concepts into pixel-perfect, responsive designs using modern frameworks like React and Next.js. With a focus on clean code, performance optimization, and seamless user experiences, I transform ideas into polished, user-friendly products that bring value to users.",
     "sub_desc":"A Frontend Developer who has built numerous dynamic and responsive web applications, focusing on delivering seamless user experiences.",
     "experience":[
        { 
@@ -71,3 +73,15 @@ export const RESUMEOBJECT ={
        }
     ]
 }
+
+export const ICONDETAILS ={
+    "color":"#F46C38",
+    "size":25
+}
+
+export const INPUTFIELDS = [
+    { id: 1, label: 'Name', type: 'text', value: '' },
+    { id: 2, label: 'Email', type: 'email', value: '' },
+    { id: 3, label: 'Budget', type: 'text', value: '' },
+    { id: 4, label: 'Message', type: 'textarea', value: '' },
+  ];

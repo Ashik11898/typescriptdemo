@@ -1,0 +1,43 @@
+$primary-color: #007bff;
+$primary-color-hover: #0056b3;
+$border-color: #ccc;
+$border-radius: 4px;
+$padding: 8px;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .full-width {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: $padding;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+
+  button {
+    padding: 10px 15px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+}
