@@ -42,19 +42,26 @@
 .profile-parent{
     background-color: #fff;
     width: 350px;
-    height: 400px;
+    height: 640px;
     position: fixed;
     border-radius: 16px;
     padding: 30px 20px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     
    .profile-imgblock{
-    background-color: $namecolor;
-    width: 240px;
-    height: 284px;
+        background-color: $namecolor;
+        width: 240px;
+        height: 284px;
+        border-radius: 20px;
+   }
+   .profile-name{
+    margin-top: 20px;
+   }
+   .profile-subdesc{
+    text-align: center;
+    margin-top: 100px;
    }
 
 }
