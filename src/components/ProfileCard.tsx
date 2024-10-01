@@ -1,8 +1,15 @@
-import React from 'react'
+type ProfileProps={
+  name:string,
+  subdesc:string
+}
 
-const ProfileCard = () => {
+const ProfileCard = ({name,subdesc}:ProfileProps) => {
   return (
-    <div className='profile-parent'>ProfileCard</div>
+    <div className='profile-parent'>
+      <div className='profile-imgblock'></div>
+      <div>{name}</div>
+      <div>{subdesc}</div>
+    </div>
   )
 }
 

@@ -1,4 +1,5 @@
 import {HeadingText, ParaText, WorkInfo,} from "../elements/HeadingText"
+import ProjectsPage from "./ProjectsPage"
 
 const AboutPage = () => {
   const HEADTEXT = "FRONTENED"
@@ -10,8 +11,8 @@ const AboutPage = () => {
     <div className='about-parent'>
        <HeadingText mainText={HEADTEXT} subText={SUBTEXT}/>
        <ParaText mainText={PARATEXT}/>
-       
        <WorkInfo/>
+       <div style={{marginTop:"120px"}}><ProjectsPage/></div>
     </div>
   )
 }

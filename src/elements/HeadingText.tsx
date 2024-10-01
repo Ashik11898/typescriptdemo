@@ -13,10 +13,15 @@ export const ParaText = ({mainText}:HeadingProps) => {
     return (
       <p className="paratext-parent">{mainText}</p>
     )
-  }
+}
 
+export const ParaHead = ({mainText}:HeadingProps) => {
+    return (
+      <p className="paraHead-parent">{mainText}</p>
+    )
+}
 
-  export const WorkInfo = () => {
+export const WorkInfo = () => {
     return (
       <div className="workInfo-parent">
         <div>+12 <p>Years Of Experience</p></div>
@@ -24,4 +29,4 @@ export const ParaText = ({mainText}:HeadingProps) => {
         <div>+20 <p>Worldwide Clients</p></div>
       </div>
     )
-  }
+}
