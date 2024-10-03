@@ -20,7 +20,7 @@
 .layout-parent{
     width: 1024px;
     position: relative;
-    padding-top: 161px;
+    padding-top: 30px;
 }
 
 // .main-parent {align-items: center;
@@ -64,6 +64,7 @@
     align-items: center;
     box-sizing: border-box;
     background: #fff;
+    z-index: 1;
     &::before{
         content:"";
         background: url("../svg/profilesvg.svg")no-repeat 0 0,url("../svg/profilesvg2.svg")no-repeat -130px 310px;
