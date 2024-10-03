@@ -1,4 +1,5 @@
 import { ParaHead, ParaText } from "../elements/HeadingText";
+import {PARAHEAD_STYLE2,PARATEXT_STYLE1, PARATEXT_STYLE2} from "../constants"
 
 type Project = {
     project_desc: string;
@@ -24,17 +25,17 @@ const ProjectList = ({data}:ExperienceData) => {
         {
             data.map((list)=>(
                 <div key={list.id}>
-                    <ParaHead mainText={list.company}/>
+                    <ParaHead mainText={list.company} styles={PARAHEAD_STYLE2}/>
                     <div>
                         {
                         list.projects.map((items,id)=>(
                             <div key={id}>
-                                <ParaText mainText={items.project_name} />
+                                <ParaText mainText={items.project_name} styles={PARATEXT_STYLE1}/>
                                 <ParaText mainText={items.project_desc} />
                             </div>))
                         }
                     </div>
-                    <div>{list.year}</div>
+                    <ParaText mainText={list.year} styles={PARATEXT_STYLE2}/>
                 </div>
             ))
         }

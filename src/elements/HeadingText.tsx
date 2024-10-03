@@ -1,7 +1,10 @@
 type HeadingProps={
     mainText:string,
-    subText?:string
+    subText?:string,
+    styles?: React.CSSProperties;
 }
+
+
 
 export const HeadingText = ({mainText,subText}:HeadingProps) => {
   return (
@@ -9,15 +12,15 @@ export const HeadingText = ({mainText,subText}:HeadingProps) => {
   )
 }
 
-export const ParaText = ({mainText}:HeadingProps) => {
+export const ParaText = ({mainText,styles}:HeadingProps) => {
     return (
-      <p className="paratext-parent">{mainText}</p>
+      <p className="paratext-parent" style={styles}>{mainText}</p>
     )
 }
 
-export const ParaHead = ({mainText}:HeadingProps) => {
+export const ParaHead = ({mainText,styles}:HeadingProps) => {
     return (
-      <p className="paraHead-parent">{mainText}</p>
+      <p className="paraHead-parent" style={styles}>{mainText}</p>
     )
 }
 

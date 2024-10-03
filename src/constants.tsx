@@ -85,4 +85,10 @@ export const INPUTFIELDS = [
     { id: 2, label: 'Email', type: 'email', value: '' },
     { id: 3, label: 'Budget', type: 'text', value: '' },
     { id: 4, label: 'Message', type: 'textarea', value: '' },
-  ];
+];
+
+
+export const PARAHEAD_STYLE1 ={color:"#fff"}
+export const PARAHEAD_STYLE2 ={width:"fit-content",color:"#fff",background:"#F46C38",padding:"5px"}
+export const PARATEXT_STYLE1 ={color:"#fff",fontWeight:"700",fontSize:"20px"}
+export const PARATEXT_STYLE2 ={color:"#F46C38",fontWeight:"500",fontSize:"18px"}
