@@ -15,8 +15,10 @@ const portFolioData = usePortfolioData()
   return (
     <div className="App">
       <Layout>
-        <ProfileCard name={RESUMEOBJECT.name} subdesc={RESUMEOBJECT.sub_desc}/>
-        <AboutPage/>
+        <div className='main-parent'>
+          <ProfileCard name={RESUMEOBJECT.name} subdesc={RESUMEOBJECT.sub_desc}/>
+          <AboutPage/>
+        </div>
       </Layout>
       
     </div>

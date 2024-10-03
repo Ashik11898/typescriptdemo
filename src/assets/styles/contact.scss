@@ -5,39 +5,44 @@ $border-radius: 4px;
 $padding: 8px;
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  .grid-container {
+    margin-top: 30px;
+    input,textarea{
+        height: 40px;
+        padding: 10px;
+        outline: none;
+        box-sizing: border-box;
+        border-radius: 8px;
+        border: none;
+        background-color: rgb(153, 143, 143);
+      }
+      textarea{
+        border-radius: 8px;
+    }  
+  .input-phase1{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+    gap: 20px;
+     
   }
-
-  .full-width {
+ 
+  .input-phase2{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    input:nth-child(2){
+        height: 120px;
+    }
   }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: $padding;
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-  }
-
   button {
     padding: 10px 15px;
-    background-color: $primary-color;
+    background-color: $namecolor;
     color: white;
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
-
-    &:hover {
-      background-color: $primary-color-hover;
-    }
+    margin-top: 15px;
+    width: 100%;
+    
   }
 }

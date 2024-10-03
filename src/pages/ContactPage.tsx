@@ -1,5 +1,7 @@
 import { INPUTFIELDS } from "../constants";
 import React, { useState } from 'react';
+import { HeadingText } from "../elements/HeadingText";
+
 
 // Define the type for the form fields
 type FieldInput ={
@@ -11,8 +13,11 @@ type FieldInput ={
 
 const ContactPage = () => {
 
+const [formData, setFormData] = useState<FieldInput[]>(INPUTFIELDS);
 
-  const [formData, setFormData] = useState<FieldInput[]>(INPUTFIELDS);
+
+const MAINTXT ="LET'S WORK"
+const SUBTEXT = "TOGETHER"
 
  // Handle input change
  const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -34,37 +39,22 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 };
 
 
-
-
-
-
 return (
-  <form onSubmit={handleSubmit} className="contact-form">
-    <div className="grid-container">
-      {formData.map((field, index) => (
-        <div key={field.id} className={field.id === 1 || field.id === 2 ? 'grid-item' : 'full-width'}>
-          <label htmlFor={`field-${field.id}`}>{field.label}</label>
-          {field.type === 'textarea' ? (
-            <textarea
-              id={`field-${field.id}`}
-              value={field.value}
-              onChange={(e) => handleChange(index, e)}
-              required
-            />
-          ) : (
-            <input
-              type={field.type}
-              id={`field-${field.id}`}
-              value={field.value}
-              onChange={(e) => handleChange(index, e)}
-              required
-            />
-          )}
-        </div>
-      ))}
-    </div>
-    <button type="submit">Submit</button>
-  </form>
+  <div style={{marginTop:"120px"}}>
+    <HeadingText mainText={MAINTXT} subText={SUBTEXT}/>
+     <form onSubmit={handleSubmit} className="contact-form">
+       <div className="input-phase1">
+          <input type="text" placeholder="Your Name"/>
+          <input type="text" placeholder="Your @email.com"/>
+       </div> 
+       <div className="input-phase2">
+          <input type="text"/>
+          <textarea id="subject" name="subject" placeholder="Message.." style={{height:"120px"}}></textarea>
+       </div> 
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+ 
 );
 }
 
