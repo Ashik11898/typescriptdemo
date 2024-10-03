@@ -24,7 +24,7 @@ console.log("w",windowInnerht);
 
 
   return (
-    <div className='profile-parent'   style={{ height: windowInnerht !== null && windowInnerht > 580 ? "550px" : "650px" }}>
+    <div className='profile-parent'   style={{ height: windowInnerht !== null && windowInnerht < 600 ? "550px" : "650px" }}>
       <div className='profile-imgblock'></div>
       <div className='profile-name'><ParaHead mainText={name}/></div>
       <div className='profile-subdesc'><ParaText mainText={subdesc}/></div>
