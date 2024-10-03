@@ -1,32 +1,33 @@
-import { useState,useRef } from "react";
-import { NAVBARDATA } from "../constants"
-import { GiHamburgerMenu } from "react-icons/gi";
-import useOutsideClick from "../hooks/useOutsideClick";
 import "../assets/styles/navpage.scss"
+import { LuHome } from "react-icons/lu";
+import { PiSuitcase } from "react-icons/pi";
+import { LuFolder } from "react-icons/lu";
+import { VscTools } from "react-icons/vsc";
+import { RiContactsFill } from "react-icons/ri";
+import {ICONDETAILS} from "../constants"
+
+
+
+
+
 
 const Navbar = () => {
-  const [navList,setNavList] =useState(NAVBARDATA)
-  const [navPopup,setNavpop] =useState(false)
-  const closeRef = useRef(null);
+ 
 
-  const openNavItems =(e:React.MouseEvent<HTMLDivElement>)=>{
-    e.preventDefault();
-    setNavpop(!navPopup)
-  }
-
-
-
-  useOutsideClick(closeRef, () => {setNavpop(false)})
+ 
 
 
   return (
     
-    <div className="navpage-parent" ref={closeRef}>
-      <div className="navbar-name" onClick={(e)=>{openNavItems(e)}}>Mohamed Ashik <span>FRONTEND DEVELOPER</span></div>
-      <div className={`navitems-list ${navPopup ? "enable":""}`}>
-        {navList.map((pages)=>(<div key={pages.id} className={`navitems ${pages.isactive ? "active":""}`} >{pages.pagename}</div>))}
+    <div className="navpage-parent">
+      <div className="navpage-parent-block">
+          <div><LuHome color={ICONDETAILS.color2} size={ICONDETAILS.size}/></div>
+          <div><PiSuitcase color={ICONDETAILS.color2} size={ICONDETAILS.size}/></div>
+          <div><LuFolder color={ICONDETAILS.color2} size={ICONDETAILS.size}/></div>
+          <div><VscTools color={ICONDETAILS.color2} size={ICONDETAILS.size}/></div>
+          <div><RiContactsFill color={ICONDETAILS.color2} size={ICONDETAILS.size}/></div>
       </div>
-      <div className="mob-icon hide" onClick={(e)=>{openNavItems(e)}}><GiHamburgerMenu fontSize={24}/> </div>
+      
     </div>
     
   )

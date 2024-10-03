@@ -76,6 +76,7 @@ export const RESUMEOBJECT ={
 
 export const ICONDETAILS ={
     "color":"#F46C38",
+    "color2":"#F46C38",
     "size":25
 }
 

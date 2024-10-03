@@ -6,13 +6,14 @@ import ContactPage from "./ContactPage"
 const AboutPage = () => {
 
   const {role=[],desc}= RESUMEOBJECT
+  const STYLES ={marginTop:"120px"}
 
   return (
     <div className='about-parent'>
        <HeadingText mainText={role[0].toUpperCase()} subText={role[role.length -1].toUpperCase()}/>
        <ParaText mainText={desc}/>
        <WorkInfo/>
-       <div style={{marginTop:"120px"}}><ProjectsPage/></div>
+       <div style={STYLES}><ProjectsPage/></div>
        <ContactPage/>
     </div>
   )

@@ -5,6 +5,7 @@ import AboutPage from './pages/AboutPage';
 import './App.css';
 import "./assets/styles/styles.scss"
 import { RESUMEOBJECT } from './constants';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -16,8 +17,12 @@ const portFolioData = usePortfolioData()
     <div className="App">
       <Layout>
         <div className='main-parent'>
-          <ProfileCard name={RESUMEOBJECT.name} subdesc={RESUMEOBJECT.sub_desc}/>
-          <AboutPage/>
+          <Navbar/>
+          <div>
+            <ProfileCard name={RESUMEOBJECT.name} subdesc={RESUMEOBJECT.sub_desc}/>
+            <AboutPage/>
+          </div>
+          
         </div>
       </Layout>
       
