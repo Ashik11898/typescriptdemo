@@ -2,42 +2,45 @@ import { ParaHead, ParaText } from "../elements/HeadingText";
 import {PARAHEAD_STYLE2,PARATEXT_STYLE1, PARATEXT_STYLE2} from "../constants"
 
 type Project = {
-    project_desc: string;
-    project_name: string;
-    tools: string[];
-  };
-  
-  type Experience = {
-    company: string;
-    projects: Project[];
-    year: string;
-    id:number;
-  };
-  
-  type ExperienceData = {
-    data: Experience[];
-  };
-  
+  name: string;
+  description: string[];
+  technologies: string[];
+};
 
-const ProjectList = ({data}:ExperienceData) => {
+type ExperienceData = {
+  company: string;
+  role: string;
+  duration: string;
+  projects: Project[];
+}
+
+type ProjectListProps = {
+  data: ExperienceData[];
+};
+
+const ProjectList = ({data}:ProjectListProps) => {
   return (
     <div>
         {
-            data.map((list)=>(
-                <div key={list.id}>
+            data.map((list,id)=>(
+                <div key={id}>
                     <ParaHead mainText={list.company} styles={PARAHEAD_STYLE2}/>
                     <div>
                         {
-                        list.projects.map((items,id)=>(
+                          list.projects.map((items,id)=>(
                             <div key={id}>
-                                <ParaText mainText={items.project_name} styles={PARATEXT_STYLE1}/>
-                                <ParaText mainText={items.project_desc} />
+                                <ParaText mainText={items.name} styles={PARATEXT_STYLE1}/>
+                                <ParaText mainText={items.description[0]} />
+                                
                             </div>))
+
                         }
                     </div>
-                    <ParaText mainText={list.year} styles={PARATEXT_STYLE2}/>
+                    <ParaText mainText={list.duration} styles={PARATEXT_STYLE2}/>
                 </div>
             ))
+
+
         }
     </div>
   )

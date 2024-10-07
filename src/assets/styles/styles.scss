@@ -96,6 +96,13 @@
    }
 
 }
+.profile-hyt{
+    height: 550px;
+   &::before{
+    background: url("../svg/profilesvg.svg")no-repeat 0 0,url("../svg/profilesvg2.svg")no-repeat -160px 220px;
+
+   }
+}
 
 //headtext-parent
 .headtext-parent{
