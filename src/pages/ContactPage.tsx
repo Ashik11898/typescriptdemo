@@ -40,7 +40,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
 
 return (
-  <div style={{marginTop:"120px"}}>
+  <div style={{marginTop:"120px"}} className="contact-parent">
     <HeadingText mainText={MAINTXT} subText={SUBTEXT}/>
      <form onSubmit={handleSubmit} className="contact-form">
        <div className="input-phase1">

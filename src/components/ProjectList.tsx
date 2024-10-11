@@ -1,5 +1,6 @@
 import { ParaHead, ParaText } from "../elements/HeadingText";
-import {PARAHEAD_STYLE2,PARATEXT_STYLE1, PARATEXT_STYLE2} from "../constants"
+import {PARAHEAD_STYLE2,PARATEXT_STYLE1, PARATEXT_STYLE2,PARAHEAD_RESPONSIVE} from "../constants"
+import { useState,useEffect } from "react";
 
 type Project = {
   name: string;
@@ -19,12 +20,22 @@ type ProjectListProps = {
 };
 
 const ProjectList = ({data}:ProjectListProps) => {
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+console.log("width",width);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div>
         {
             data.map((list,id)=>(
                 <div key={id}>
-                    <ParaHead mainText={list.company} styles={PARAHEAD_STYLE2}/>
+                    <ParaHead mainText={list.company} styles={width > 1079 ? PARAHEAD_STYLE2:PARAHEAD_RESPONSIVE}/>
                     <div>
                         {
                           list.projects.map((items,id)=>(

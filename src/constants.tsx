@@ -147,7 +147,11 @@ export const RESUMEOBJECT ={
           organization: "MongoDB University",
           year: 2023
         }
-    ]
+    ],
+    "total_experience":5,
+    "clients":7,
+    "projects":10,
+
 }
 
 export const ICONDETAILS ={
@@ -166,5 +170,7 @@ export const INPUTFIELDS = [
 
 export const PARAHEAD_STYLE1 ={color:"#fff"}
 export const PARAHEAD_STYLE2 ={width:"fit-content",color:"#fff",background:"#F46C38",padding:"5px"}
+export const PARAHEAD_RESPONSIVE ={width:"100%",background:"#F46C38",paddingBlock:"8px"}
+
 export const PARATEXT_STYLE1 ={color:"#fff",fontWeight:"700",fontSize:"20px"}
 export const PARATEXT_STYLE2 ={color:"#F46C38",fontWeight:"500",fontSize:"18px"}

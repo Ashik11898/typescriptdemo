@@ -1,7 +1,6 @@
 @import "./navpage.scss";
 @import "./variable.scss";
 @import "./aboutPage.scss";
-@import "./responsive.scss";
 @import "./contact.scss";
 
 .hide{display: none;}
@@ -23,20 +22,6 @@
     padding-top: 30px;
 }
 
-// .main-parent {align-items: center;
-// background-color: #fff0;
-// display: flex;
-// flex: none;
-// flex-direction: row;
-// flex-wrap: nowrap;
-// gap: 10px;
-// height: min-content;
-// justify-content: center;
-// overflow: visible;
-// padding: 0;
-// position: relative;
-// width: 100%;
-// }
 
 // FOOTER COMPONENT SCSS
 
@@ -147,3 +132,14 @@
         }
     }
 }
+
+.project-page-combined{
+    padding: 0px;
+    margin-top: 120px
+}
+
+.contact-parent{
+    margin-top: 120px
+}
+
+@import "./responsive.scss";

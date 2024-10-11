@@ -1,76 +1,102 @@
-@media only screen and (max-width: 992px) and (min-width: 770px)  {
-
-    // NAVPAGE.SCSS RESPONSIVE  STARTS
-        .navpage-parent{
-            padding: 20px 20px 20px 20px;
-            .navbar-name{
-                font-size: 2.5vw;
-                display: flex;
-                flex-direction: column;
-                padding-left: 22px;
-                    span{font-size: 1.5vw;}
-                     &::before{
-                        top: 1.5vw;
-                        left: 10px;
-                        width: 1vw;
-                        height: 1vw;
-                    }
-            }
-            
-           
-        }
-
-    // NAVPAGE.SCSS RESPONSIVE  ENDS
-
-}
-
-
+@media only screen and (max-width: 1080px) and (min-width: 600px)  {
     
-    @media only screen and (max-width: 770px) and (min-width: 360px)  {
+    .layout-parent{
+        //padding-inline: 20px
+        width: 100%;
+    }
+    .profile-parent {
+        width: 100%;
+        position: relative;
+        margin-top: 80px;
+        z-index: 0;
+    }
+    .about-parent{
+        width: 100%;
+        text-align: center;
+    }
+    .workInfo-parent{
+        justify-content: center;
+    }
+    .headtext-parent {
+        font-size: 55px;
+    }
+    .main-parent{
+        padding: 0 20px;
+        float: left;
+    }
+    .App{
+        width: 100%;
+    }
 
-        // NAVPAGE.SCSS RESPONSIVE 
-            .navpage-parent{
-                padding: 20px 20px 20px 20px;
-                .navbar-name{
-                    font-size: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    padding-left: 22px;
-                
-                    span{
-                        font-size: 14px;
-                    }
-                    &::before{
-                        top: 13px;
-                        left: 9px;
-                        width: 7px;
-                        height: 7px;
-                    }
-                }
-                .navitems-list{
-                    gap: 15px;
-                    font-size: 15px;
-                    flex-direction: column;
-                    position: absolute;
-                    width: 100%;
-                    align-items: end;
-                    top: 90px;
-                    background: $backcolor1;
-                    left: 0px;
-                    padding: 20px 0;
-                    display: none;
-                   .navitems{
-                    padding-right: 20px;
-                    text-align: right;
-                   }
-                    
-                }
-                .navitems-list.enable{
-                    display: flex;
-                }
-                .mob-icon{
-                    display: block;
-                }
-            }
-        }    
+    .workInfo-parent div p {
+        width: 100%;
+    }
+   
+ }
+
+ @media only screen and (max-width: 600px) and (min-width: 320px)  {
+    .App{
+        width: 100%;
+    }
+    .layout-parent{
+        //padding-inline: 20px
+        width: 100%;
+    }
+    .profile-parent {
+        width: 100%;
+        position: relative;
+        margin-top: 80px;
+        z-index: 0;
+    }
+    .main-parent{
+        //padding: 0 20px;
+        float: left;
+        width: 100%;
+    }
+    .about-parent{
+        width: 100%;
+        text-align: center;
+    }
+    .workInfo-parent{
+        justify-content: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .workInfo-parent div {
+        font-size: 30px;
+    }
+    // .project-page-combined{
+    //     padding: 0 20px;
+    // }
+    .workInfo-parent div p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .headtext-parent {
+        font-size: 35px;
+    }
+    .paratext-parent {
+        color: rgb(153, 143, 143);
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .project-page-combined{
+        padding: 0px 20px;
+        margin-top: 40px;
+        width: 100%;
+        box-sizing: border-box
+    }
+    .contact-parent{
+        margin-top: 40px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    
+ }
 

@@ -5,15 +5,15 @@ import ContactPage from "./ContactPage"
 
 const AboutPage = () => {
 
-  const {role=[],desc}= RESUMEOBJECT
+  const {role=[],desc,total_experience,projects,clients}= RESUMEOBJECT
   const STYLES ={marginTop:"120px"}
 
   return (
     <div className='about-parent'>
        <HeadingText mainText={role[0].toUpperCase()} subText={role[role.length -1].toUpperCase()}/>
        <ParaText mainText={desc}/>
-       <WorkInfo/>
-       <div style={STYLES}><ProjectsPage/></div>
+       <WorkInfo experience={total_experience} clients={clients} projects={projects}/>
+       <div className="project-page-combined"><ProjectsPage/></div>
        <ContactPage/>
     </div>
   )

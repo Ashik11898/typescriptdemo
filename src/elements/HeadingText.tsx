@@ -4,6 +4,11 @@ type HeadingProps={
     styles?: React.CSSProperties;
 }
 
+type WorkExperience={
+  experience:number,
+   clients:number,
+   projects:number
+}
 
 
 export const HeadingText = ({mainText,subText}:HeadingProps) => {
@@ -24,12 +29,12 @@ export const ParaHead = ({mainText,styles}:HeadingProps) => {
     )
 }
 
-export const WorkInfo = () => {
+export const WorkInfo = ({experience,clients,projects}:WorkExperience) => {
     return (
       <div className="workInfo-parent">
-        <div>+12 <p>Years Of Experience</p></div>
-        <div>+46 <p>Projects Completed</p></div>
-        <div>+20 <p>Worldwide Clients</p></div>
+        <div>+{experience} <p>Years Of Experience</p></div>
+        <div>+{projects} <p>Projects Completed</p></div>
+        <div>+{clients}<p>Worldwide Clients</p></div>
       </div>
     )
 }
